@@ -1,0 +1,22 @@
+<div>
+  {{waiter}}
+</div>
+<div>
+  <h2>
+    {{waiter.name | uppercase }} detalles
+  </h2>
+  <div>
+    <span>id: </span>
+    {{waiter.id}}
+  </div>
+  <div>
+    <span>name: </span>
+    {{waiter.name}}
+  </div>
+</div>
+<div>
+    <label>name:
+      <input [(ngModel)]="waiter.name" placeholder="name">
+    </label>
+</div>
+  
