@@ -20,6 +20,14 @@ export class MeseroComponent implements OnInit {
 
   ngOnInit() {
   }
+  ngDoCheck() {
+    //revisa el estado
+    console.log('DoCheck ejecutado');
+  }
+  ngOnDestroy() {
+    //destruye el componente dentro del ciclo de vida
+    console.log('ondestroy ejecutado');
+  }
 
  
 

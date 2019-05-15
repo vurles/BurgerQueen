@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel está aquí
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MeseroComponent } from './mesero/mesero.component';
+import { CocinaComponent } from './cocina/cocina.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeseroComponent
+    MeseroComponent,
+    CocinaComponent
   ],
   imports: [
     BrowserModule,

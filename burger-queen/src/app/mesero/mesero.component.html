@@ -1,22 +1,44 @@
-<div>
-  {{waiter}}
-</div>
-<div>
-  <h2>
-    {{waiter.name | uppercase }} detalles
-  </h2>
-  <div>
-    <span>id: </span>
-    {{waiter.id}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+          <h2>
+            {{waiter.name | uppercase }} detalles
+          </h2>
+          <div>
+            <span>id: </span>
+            {{waiter.id}}
+          </div>
+          <div>
+            <span>name: </span>
+            {{waiter.name}}
+          </div>
+        </div>
+        <div>
+            <label>name:
+              <input [(ngModel)]="waiter.name" placeholder="name">
+            </label>
+        </div>
+        <button type="button" class="btn btn-warning btn-lg" style=" margin: 1rem">
+            Desayuno
+          </button>
+          <button type="button" class="btn btn-warning btn-lg" style=" margin: 1rem">
+              Almuerzo/Cena
+            </button>
+        <!-- <div>
+            <button type="button" class="btn btn-warning btn-lg" style=" margin: 1rem">
+                Café americano
+              </button>
+              <button type="button" class="btn btn-warning btn-lg" style=" margin: 1rem">Café con leche</button>
+              <button type="button" class="btn btn-warning btn-lg" style=" margin: 1rem">
+                Sandwich jamón y queso
+              </button>
+              <button type="button" class="btn btn-warning btn-lg" style=" margin: 1rem">Jugo natural</button>
+        </div> -->
+    </div>
   </div>
-  <div>
-    <span>name: </span>
-    {{waiter.name}}
-  </div>
 </div>
-<div>
-    <label>name:
-      <input [(ngModel)]="waiter.name" placeholder="name">
-    </label>
-</div>
+
+
+
   
