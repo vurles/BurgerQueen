@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Waiter } from '../models/order';
-import { from } from 'rxjs';
+import { MENU } from '../mock/mock-mesero';
 // import {Waiter} from '../waiter';
 //import { from } from 'rxjs';
 // import { waiter } from '../app.component';
@@ -11,24 +11,18 @@ import { from } from 'rxjs';
   styleUrls: ['./mesero.component.css']
 })
 export class MeseroComponent implements OnInit {
-    waiter: Waiter = {
-      id:1,
-      name:'mesero'
-    };
-  //waiter = 'mesero';
+  menu =  MENU;
+  /* Inicializacion de un objeto del tipo Waiter */
+  // waiter: Waiter = {id: 0, name : '' }
+  /*                                             */
+  selectedWaiter: Waiter;
+   
   constructor() { }
 
   ngOnInit() {
+    console.log(this.menu);
   }
-  ngDoCheck() {
-    //revisa el estado
-    console.log('DoCheck ejecutado');
+  onSelect(waiter : Waiter): void {
+    this.selectedWaiter = waiter;
   }
-  ngOnDestroy() {
-    //destruye el componente dentro del ciclo de vida
-    console.log('ondestroy ejecutado');
-  }
-
- 
-
 }

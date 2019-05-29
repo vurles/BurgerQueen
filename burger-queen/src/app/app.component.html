@@ -1,24 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-    <!-- aqui pongo mi "enlase" de los otros componentes que quiero mostrar como exportando -->
-  </h1>
-</div>
 <!-- contenedor de mi grilla mas logo y botones-->
-<div class="container bg-secondary">
+<div class="container inicio">
   <div class="row">
     <div class="col-md-12">
+      <div class="titulo">
+        <h1>
+          Welcome to {{ title }}!
+            <!-- aqui pongo mi "enlase" de los otros componentes que quiero mostrar como exportando -->
+        </h1>
+      </div>
       <img width="300" alt="gato_comiendo" src="../assets/img/burguercat.png" />
-      <button (click)="ocultar(false)" *ngIf="mostrar" type="button" class="btn btn-light" >Mesero</button>
-      <button (click)="ocultar(true)" *ngIf="!mostrar" type="button" class="btn btn-light" style=" margin: 1rem">Cocina</button>
+      <button type="button" class="btn btn-lg btn-warning" >Mesero</button>
+      <button type="button" class="btn btn-lg btn-warning" style=" margin: 1rem">Cocina</button>
 
     </div>
   </div>
 </div>
-
 <div>
-  <app-mesero *ngIf="mostrar"></app-mesero>
+  <app-mesero ></app-mesero>
   <app-cocina ></app-cocina>
 </div>
 <router-outlet></router-outlet>

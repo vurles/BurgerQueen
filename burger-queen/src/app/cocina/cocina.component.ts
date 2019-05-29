@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Waiter } from '../models/order';
 
 @Component({
   selector: 'app-cocina',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cocina.component.css']
 })
 export class CocinaComponent implements OnInit {
-
+  @Input() waiter: Waiter;
+  
   constructor() { }
 
   ngOnInit() {
